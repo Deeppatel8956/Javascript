@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        image {
+            margin: auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .imageslider {
+            display: none;
+        }
+        button{
+            width: 66px;
+            /* padding: 30px 20px;
+            margin: 30px 20px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="imageslider">
+            <img src="pizza.jpeg" alt="">
+        </div>
+        <div class="imageslider">
+            <img src="pexels-photo-1414651.jpeg" alt="">
+        </div>
+        <div class="imageslider">
+            <img src="Slider-1080x608.jpg" alt="">
+        </div>
+    </div>
+    <button onclick="setslide(-1)">Previus</button>
+    <button onclick="setslide(1)">Next</button>
+</body>
+<script>
+    let currentslide = 1;
+    diplayslide(currentslide);
+    function setslide(num) {
+       diplayslide (currentslide += num);
+    }
+    function diplayslide(num) {
+        let slides = document.getElementsByClassName("imageslider")
+        if (num > slides.length) {
+            currentslide = 1
+        }
+        if (num < 1) {
+            currentslide = slides.length
+        }
+        for (let x = 0; x < slides.length; x++) {
+            slides[x].style.display = "none"
+        }
+        slides[currentslide - 1].style.display = 'block'
+    }
+</script>
+
+</html>
