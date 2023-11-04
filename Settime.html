@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settimeout</title>
+    <style>
+        .box{
+            height: 50vh;
+            border: 2px solid black;
+        }
+        .box1{
+            height: 50vh;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button onclick="Stop()">stop</button>
+    <div class="box1"></div>
+    <button onclick="red()">Color</button>
+</body>
+<script>
+    let set=setInterval(Setcolor,1000)
+    function Setcolor() {
+        let u=document.querySelector('.box');
+        u.style.backgroundColor=u.style.backgroundColor=='blue'?'red':'blue'
+    }
+    function Stop() {
+        clearInterval(set)
+    }
+    function red() {
+        document.querySelector('.box1').style.backgroundColor="red"
+    }
+</script>
+</html>
