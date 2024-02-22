@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <button onclick="document.getElementById('dwmo').innerHTML=new_MArhmethod1(0,10)">min value</button>
+    <p id="dwmo">0</p>
+    <button onclick="document.getElementById('dwmo').innerHTML=getRndInteger(0,10)"></button>
+    <button onclick="document.getElementById('dwmo').innerHTML=new_MArhmethod(0,10)">click me</button>
+    <script>
+        document.title="MATH"
+//  q1 Math.PI returns the ratio of a circle's circumference to its diameter:
+
+document.getElementById('demo').innerHTML=Math.PI
+
+
+// q2Math.round(x) returns the value of x rounded to its nearest integer:
+document.getElementById('demo2').innerHTML=Math.round(4.5)
+
+// q3 Math.pow(x,y) returns the value of x to the power of y:
+document.getElementById('demo3').innerHTML=Math.pow(5,2)
+
+// q4 Math.sqrt(x) returns the square root of x:
+document.getElementById('demo4').innerHTML=Math.sqrt(4)
+
+// q5 Math.abs(x) returns the absolute (positive) value of x:
+document.getElementById('demo5').innerHTML=Math.abs(-7.8)
+
+// q6 Math.ceil() rounds a number up to its nearest integer:
+document.getElementById('demo6').innerHTML=Math.ceil(4.5)
+
+// q7Math.floor(x) returns the value of x rounded down to its nearest integer:
+document.getElementById('demo7').innerHTML=Math.floor(4.8)
+
+// q8 Math.sin(x) returns the sin of x (given in radians):
+// Angle in radians = (angle in degrees) * PI / 180.
+// The sine value of 90 degrees is 1
+document.getElementById("demo8").innerHTML = 
+"The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180);
+
+document.getElementById("demo9").innerHTML = 
+"The cosine value of 0 degrees is " + Math.cos(0 * Math.PI / 180);
+
+// q9 Math.max() returns the highest value in a list of arguments. or min
+document.getElementById("demo10").innerHTML =
+Math.max(0, 150, 30, 20, -8, -200);
+document.getElementById("demo11").innerHTML =
+Math.min(0, 150, 30, 20, -8, -200);
+
+
+
+// ---- math method -----
+console.log(Math.floor(Math.random()*10))
+console.log(Math.floor(Math.random()*100))
+console.log(Math.floor(Math.random()*1000))
+console.log(Math.floor(Math.random()*99))
+console.log(Math.floor(Math.random()*100)+1)
+console.log(Math.floor(Math.random()*10)+1)
+console.log(Math.floor(Math.random()*9))
+
+function new_MArhmethod(min,max) {
+    return Math.floor(Math.random()*(max-min))+max
+}
+function new_MArhmethod1(min,max) {
+    return Math.floor(Math.random()*(max-min)) + min
+}
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+    </script>
+</body>
+</html>
