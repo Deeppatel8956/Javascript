@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      .cold{
+        text-align: center;
+        margin-top: 10rem;
+      }
+      .increment{
+        width: 200px;
+        padding: 10px;
+        margin: 10px;
+        background-color: rgba(244, 236, 236, 0.588);
+        border-radius: 10px;
+        border: 3px solid black;
+      }
+      .increment:hover{
+        cursor: pointer;
+        background-color: black;
+        color: aliceblue;
+        border-color: blueviolet;
+      }
+    </style>
+</head>
+<body>
+    <header>
+     <div class="cold">   
+    <h1>Count no</h1>
+    <h2 class="count" id="local">0</h2>
+    <button class="increment" id="Plus">Increment</button>
+    <button class="increment" id="Mins">Decrement</button>
+    <button class="increment" id="Zero">Reset</button>
+   </div>
+   </header>
+
+   <script>
+    document.title="Counter app"
+    let count=0
+    let counted=document.getElementById('local')
+    let Incre=document.getElementById('Plus')
+    let Dercre=document.getElementById('Mins')
+    let Reset=document.getElementById('Zero')
+
+    Incre.addEventListener('click',function(){
+        count++
+        console.log(count)
+        counted.innerHTML=count
+    })
+
+    Dercre.addEventListener('click',function(){
+        count--
+        counted.innerHTML=count
+    })
+
+    Reset.addEventListener('click',function(){
+        count=0
+        counted.innerHTML=count
+    })
+   </script>
+</body>
+</html>
