@@ -1,4 +1,4 @@
-function chekc_str(str,sub) {
+    function chekc_str(str,sub) {
     if (sub.length>str.length) {
         return false
     }
@@ -161,7 +161,7 @@ console.log(count_Sum(8564))
 function truncate_Str(str,n) {
     return n < 0? str:str.slice(0,n).concat('...')
 }
-console.log(truncate_Str("ghvhgchgv bhvhgfhgvghvhgv"))
+console.log(truncate_Str("ghvhgchgv bhvhgfhgvghvhgv",5))
 
 function findmax(arr) {
     let max=arr[0]
